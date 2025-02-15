@@ -387,6 +387,7 @@ h5 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  
 }
 
 .project-box {
@@ -394,6 +395,9 @@ h5 {
   overflow: hidden;
   display: block;
   max-width: 510px;
+  border: 1px solid black; /* Black outline */
+	padding: 10px;
+	margin-bottom: 15px;
 }
 
 .project-box a {
