@@ -246,7 +246,10 @@ h5 {
 
 .hero-img img {
   display: block;
+  max-width: 80%; /* Make the image responsive to its container */
+  height: auto; 
   position: relative;
+
 }
 
 .about-social-list {
