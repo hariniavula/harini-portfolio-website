@@ -1,231 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width:device-width, initial-scale=1.0" />
-    <title>About Harini Avula</title>
-    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/media.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Harini Avula</title>
+  <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .about-row {
+      padding-top: 80px;
+      display: flex;
+      padding-left: 30px;
+      padding-right: 30px;
+      
+    }
+
+    .about-image {
+      width: 40%;
+      margin-right: 10px;
+    }
+
+    .about-content {
+      width: 60%;
+
+    }
+
+    .about-title {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-top: 20px;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+
+    .about-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .about-descr {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
       .about-row {
-        padding-top: 80px;
-        display: flex;
-  padding-left: 30px;
-  padding-right: 30px;
+        flex-direction: column;
+        align-items: center;
       }
 
       .about-image {
-        width: 40%;
-        margin-right: 10px;
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 20px;
       }
 
       .about-content {
-        width: 60%;
-        
+        width: 100%;
       }
 
       .about-title {
-        font-size: 2.5rem;
-        font-weight: 500;
-        margin-top: 20px;
-        padding-bottom: 10px;
-        margin-bottom: 20px; /* Reduced margin */
-        line-height: 1; /* Adjust line height for tighter spacing */
-      }
-
-      .about-subtitle {
-        font-size: 1.1rem; /* Adjust subtitle size */
-        margin-bottom: 20px; /* Add space below subtitle */
+        font-size: 2rem;
+        text-align: center;
       }
 
       .about-descr {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin-bottom: 20px;
+        font-size: 1rem;
       }
-      @media screen and (max-width: 768px) {
-  .about-row {
-    flex-direction: column; /* Stack image and content vertically */
-    align-items: center; /* Center items horizontally */
-  }
+    }
+  </style>
+</head>
 
-  .about-image {
-    width: 80%; /* Adjust image width for smaller screens */
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 20px; /* Add space below image */
-  }
+<body>
+  <header id="header" class="header">
+    <div class="container container-lg">
+      <div class="header-nav">
+        <a href="index.html" class="logo" data-aos="fade-down" data-aos-duration="1000">Harini Avula</a>
+        <nav id="nav" class="nav">
+          <ul class="nav-list" data-aos="fade-down" data-aos-duration="1000">
+            <li class="nav-item">
+              <a href="index.html#projects" class="nav-link">Work</a>
+            </li>
+           
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
 
-  .about-content {
-    width: 100%; /* Content takes full width */
-  }
+            <li class="nav-item">
+              <a href="#" class="nav-link" onclick="window.open('./img/resume.pdf'); return false;"> Resume</a>
 
-  .about-title {
-    font-size: 2rem; /* Slightly reduce title size on smaller screens */
-    text-align: center; /* Center title */
-  }
-
-  .about-descr {
-    font-size: 1rem; /* Adjust description size */
-  }
-}
-
-
-     
-    </style>
-  </head>
-  <body>
-    <header id="header" class="header">
-      <div class="container container-lg">
-        <div class="header-nav">
-          <a
-            href="index.html"
-            class="logo"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            >Harini Avula</a
-          >
-          <nav id="nav" class="nav">
-            <ul class="nav-list" data-aos="fade-down" data-aos-duration="1000">
-                <li class="nav-item">
-                    <a href="index.html#projects" class="nav-link">Work</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="index.html#contact" class="nav-link">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                  </li>
-                 
-                  <li class="nav-item">
-                    <a href="#" class="nav-link" onclick="window.open('./img/resume.pdf'); return false;"> Resume</a>
-    
-                  </li>
-            </ul>
-            <button id="nav-btn" class="nav-btn">
-              <img
-                id="nav-btn-img"
-                src="img/icons/open.svg"
-                alt="Navigation button"
-              />
-            </button>
-          </nav>
-        </div>
+            </li>
+          </ul>
+          <button id="nav-btn" class="nav-btn">
+            <img id="nav-btn-img" src="img/icons/open.svg" alt="Navigation button" />
+          </button>
+        </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section id="about" class="about">
-        <div class="container">
-          <div class="about-row">
-            <img
-              src="img/hero/about-harini.png"
-              alt="Harini Image"
-              class="about-image"
-            />
-            <div
-              class="about-content"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <h2 class="about-title">Hey again! I'm Harini.</h2>
-              
-              <p class="about-descr">
-                I am currently a 2nd year studying computer science and economics
-                at Northeastern University in Boston, Massachusetts. 
-                <br> 
-                <br> 
-                My interests include website development, data analysis, and product design &
-                management. I love transforming ideas into impactful creations
-                that connect and inspire. 
-                <br> 
-                <br> 
-                Outside of work, I enjoy playing tennis,
-                cooking and baking, hiking, trying out new restaurants, drinking
-                matcha at cute cafes, and reading romance novels.
-              </p>
-              <div class="about-social-list">
-                <div class="social-links-row">
-                  <a href="https://github.com/hariniavula">
-                    <img
-                      src="img/social_icons/github.svg"
-                      alt="Link to GitHub account"
-                    />
-                  </a>
-  
-                  <a href="https://www.linkedin.com/in/harini-avula/">
-                    <img
-                      src="img/social_icons/linkedin.svg"
-                      alt="Link to linkedin profile"
-                    />
-                  </a>
-  
-                  <a href="mailto:hsavula@gmail.com">
-                    <img
-                      src="img/social_icons/email.svg"
-                      alt="Link to Email account"
-                    />
-                  </a>
-                 
-                </div>
+  <main>
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-row">
+          <img src="img/hero/about-harini.png" alt="Harini Image" class="about-image" />
+          <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="about-title">Hey again! I'm Harini.</h2>
+
+            <p class="about-descr">
+              I am currently a 2nd year studying computer science and economics at Northeastern University in Boston,
+              Massachusetts.
+              <br>
+              <br>
+              My interests include website development, data analysis, and product design &
+              management. I love transforming ideas into impactful creations
+              that connect and inspire.
+              <br>
+              <br>
+              Outside of work, I enjoy playing tennis,
+              cooking and baking, hiking, trying out new restaurants, drinking
+              matcha at cute cafes, and reading romance novels.
+            </p>
+            <div class="about-social-list">
+              <div class="social-links-row">
+                <a href="https://github.com/hariniavula">
+                  <img src="img/social_icons/github.svg" alt="Link to GitHub account" />
+                </a>
+
+                <a href="https://www.linkedin.com/in/harini-avula/">
+                  <img src="img/social_icons/linkedin.svg" alt="Link to linkedin profile" />
+                </a>
+
+                <a href="mailto:hsavula@gmail.com">
+                  <img src="img/social_icons/email.svg" alt="Link to Email account" />
+                </a>
+
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+   
+  </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-row">
-          <div class="social-links-row footer-social">
-            <a href="https://github.com/hariniavula">
-              <img
-                src="img/social_icons/github.svg"
-                alt="Link to GitHub account"
-              />
-            </a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="social-links-row footer-social">
+          <a href="https://github.com/hariniavula">
+            <img src="img/social_icons/github.svg" alt="Link to GitHub account" />
+          </a>
 
-            <a href="https://www.linkedin.com/in/harini-avula/">
-              <img
-                src="img/social_icons/linkedin.svg"
-                alt="Link to linkedin profile"
-              />
-            </a>
+          <a href="https://www.linkedin.com/in/harini-avula/">
+            <img src="img/social_icons/linkedin.svg" alt="Link to linkedin profile" />
+          </a>
 
-            <a href="mailto:hsavula@gmail.com">
-              <img
-                src="img/social_icons/email.svg"
-                alt="Link to Email account"
-              />
-            </a>
-          </div>
+          <a href="mailto:hsavula@gmail.com">
+            <img src="img/social_icons/email.svg" alt="Link to Email account" />
+          </a>
+        </div>
 
-          <div class="footer-copyright">
-            <p>&copy; Copyright Harini Avula 2025</p>
-          </div>
+        <div class="footer-copyright">
+          <p>&copy; Copyright Harini Avula 2025</p>
         </div>
       </div>
-    </footer>
-
-    <div id="goToTop" class="goToTop">
-      <a href="#home">
-        <img src="img/icons/arrow_up.svg" alt="Back to top"
-      /></a>
     </div>
+  </footer>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script type="module" src="js/main.js"></script>
-  </body>
+  <div id="goToTop" class="goToTop">
+    <a href="#home">
+      <img src="img/icons/arrow_up.svg" alt="Back to top" />
+    </a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+
 </html>

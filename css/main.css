@@ -1,14 +1,15 @@
 @import "./reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-  --primary-bg-color: #f7fbfd;
+  --primary-bg-color: #eff4f7;
   --primary-accent: #0c1618;
-  --secondary-accent: #6f1d1b;
+  --secondary-accent:  #9AAB89;
 
   --main-text-color: #0c1618;
   --supportive-text-color: #242d2f;
-  --gray-text-color: #565a5b;
+  --gray-text-color: #808485;
 
   --white-color: #fff;
   --gray-color: #e9e8e8;
@@ -23,13 +24,17 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-color: #eff4f7;
 }
 
 body {
   color: var(--main-text-color);
   font-family: "Poppins", sans-serif;
   letter-spacing: -0.15px;
+
 }
+
+
 
 .container {
   padding: 0 32px;
@@ -158,7 +163,7 @@ h5 {
   left: 0;
   width: 100%;
   z-index: 1999;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(239, 244, 247, 0.85);
   padding-top: 0;
   padding-bottom: 0;
   transition: all 0.3s ease-in-out;
@@ -168,8 +173,11 @@ h5 {
   position: relative;
   line-height: 1;
   font-weight: 400;
-  font-size: clamp(1.125rem, 1.011rem + 0.57vw, 1.375rem);
+  font-family: "Gochi Hand", cursive;
+  font-style: normal;
+  font-size: clamp(2.125rem, 2.011rem + 1.57vw, 2.375rem);
   color: var(--main-text-color);
+  color:var(--secondary-accent);
 }
 
 .nav-list {
@@ -233,8 +241,22 @@ h5 {
   padding-top: 120px;
   padding-bottom: 120px;
   background-color: var(--primary-bg-color);
+  
 
 
+}
+
+
+
+/* Specific styling for the "Harini" span */
+.harini-font {
+  font-weight: 400;
+  font-family: "Gochi Hand", cursive;
+  color: var(--secondary-accent);
+  font-size: 4rem;
+  line-height: 0; /* Adjust as needed */
+
+  
 }
 
 .hero-row {
@@ -247,7 +269,7 @@ h5 {
   font-size: 2.5rem; /* Adjust as needed */
   font-weight: 500; /* Adjust as needed */
   margin-bottom: 20px; /* Adjust as needed */
-  line-height: 1.2; /* Adjust as needed */
+  line-height: 1.5; /* Adjust as needed */
   color: #0c1618; /* Use your main text color */
 }
 
@@ -433,6 +455,8 @@ h5 {
 /* Works */
 .projects {
   padding: 7rem 0;
+  background-color: var(--primary-bg-color);
+
 }
 
 .projects-title {
