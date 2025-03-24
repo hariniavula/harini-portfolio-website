@@ -231,6 +231,7 @@ h5 {
 .hero {
   position: relative;
   padding-top: 120px;
+  padding-bottom: 120px;
   background-color: var(--primary-bg-color);
 
 
@@ -258,7 +259,7 @@ h5 {
 .hero-content {
   text-align: left;
   align-self: center;
-  padding-top: 50px;
+  padding-top: 100px;
   padding-left: 150px;
   padding-right: 150px;
   flex-grow: 1;
