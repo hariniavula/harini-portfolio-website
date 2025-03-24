@@ -147,8 +147,8 @@ h5 {
   justify-content: space-between;
   align-items: center;
   padding: 0 25px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
   height: 90px;
 }
 
@@ -195,11 +195,45 @@ h5 {
   text-underline-offset: 7px;
 }
 
+.about-row {
+        display: flex;
+        align-items: flex-start; /* Align items to the top */
+      }
+
+      .about-image {
+        width: 30%;
+        margin-right: 20px;
+      }
+
+      .about-content {
+        width: 60%;
+      }
+
+      .about-title {
+        font-size: 2.5rem;
+        margin-bottom: 10px; /* Reduced margin */
+        line-height: 1; /* Adjust line height for tighter spacing */
+      }
+
+      .about-subtitle {
+        font-size: 1.1rem; /* Adjust subtitle size */
+        margin-bottom: 20px; /* Add space below subtitle */
+      }
+
+      .about-descr {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+
 /* Hero section */
 .hero {
   position: relative;
   padding-top: 120px;
   background-color: var(--primary-bg-color);
+
+
 }
 
 .hero-row {
@@ -207,13 +241,30 @@ h5 {
   flex-wrap: wrap;
 }
 
+.custom-hero-text {
+ 
+  font-size: 2.5rem; /* Adjust as needed */
+  font-weight: 500; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+  line-height: 1.2; /* Adjust as needed */
+  color: #0c1618; /* Use your main text color */
+}
+
+.custom-hero-subtext {
+  font-size: 1.1rem; /* Adjust as needed */
+  color: #6f1d1b; /* Use your secondary accent color */
+}
+
 .hero-content {
   text-align: left;
   align-self: center;
-  padding: 20px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-top: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
   flex-grow: 1;
+  padding-bottom: 70px;
+
+  
 }
 
 .hero-greeting {
@@ -244,6 +295,7 @@ h5 {
   margin-top: auto;
 }
 
+
 .hero-img img {
   display: block;
   max-width: 80%; /* Make the image responsive to its container */
@@ -255,6 +307,8 @@ h5 {
 .about-social-list {
   display: flex;
 }
+
+
 
 .social-links-row {
   display: flex;
@@ -378,7 +432,6 @@ h5 {
 /* Works */
 .projects {
   padding: 7rem 0;
-  background-color: var(--primary-bg-color);
 }
 
 .projects-title {
@@ -475,6 +528,8 @@ h5 {
 .contact {
   padding: 7rem 0;
   text-align: center;
+  background-color: var(--primary-bg-color);
+
 }
 
 .contact-content {
