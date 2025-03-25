@@ -241,22 +241,22 @@ h5 {
   padding-top: 120px;
   padding-bottom: 120px;
   background-color: var(--primary-bg-color);
-  
-
-
 }
 
+.harini-font-about {
+  font-weight: 400;
+  font-family: "Gochi Hand", cursive;
+  color: var(--secondary-accent);
+  font-size: 4rem;
+  line-height: 1;
+}
 
-
-/* Specific styling for the "Harini" span */
 .harini-font {
   font-weight: 400;
   font-family: "Gochi Hand", cursive;
   color: var(--secondary-accent);
   font-size: 4rem;
-  line-height: 0; /* Adjust as needed */
-
-  
+  line-height: 0;
 }
 
 .hero-row {
@@ -265,7 +265,6 @@ h5 {
 }
 
 .custom-hero-text {
- 
   font-size: 2.5rem; /* Adjust as needed */
   font-weight: 500; /* Adjust as needed */
   margin-bottom: 20px; /* Adjust as needed */
@@ -286,8 +285,6 @@ h5 {
   padding-right: 150px;
   flex-grow: 1;
   padding-bottom: 70px;
-
-  
 }
 
 .hero-greeting {
@@ -318,15 +315,49 @@ h5 {
   margin-top: auto;
 }
 
-
 .hero-img img {
   display: block;
   max-width: 80%; /* Make the image responsive to its container */
-  height: auto; 
+  height: auto;
   position: relative;
-
 }
 
+/* Media Queries for Hero Section */
+@media (max-width: 768px) {
+
+  .hero {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 10px;
+  }
+  .hero-content {
+    padding-left: 80px; /* Adjust padding for smaller screens */
+    padding-right: 80px;
+    padding-top: 80px;
+  }
+
+  .custom-hero-text {
+    font-size: 1.7rem; /* Make the main hero text slightly smaller */
+  }
+
+  .hero-heading {
+    font-size: 2.5rem; /* Make the main heading slightly smaller */
+  }
+
+  .hero-heading-subtitle {
+    font-size: 1rem; /* Make the subtitle slightly smaller */
+  }
+
+  .hero-img {
+    justify-content: center; /* Center the image on smaller screens */
+  }
+
+  .harini-font {
+    font-weight: 400;
+    font-size: 2.75rem;
+    line-height: 0;
+  }
+}
 .about-social-list {
   display: flex;
 }
@@ -453,10 +484,10 @@ h5 {
 }
 
 /* Works */
+/* Works */
 .projects {
   padding: 7rem 0;
   background-color: var(--primary-bg-color);
-
 }
 
 .projects-title {
@@ -466,9 +497,8 @@ h5 {
 .projects-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* Keep items centered */
   gap: 20px;
-  
 }
 
 .project-box {
@@ -476,9 +506,10 @@ h5 {
   overflow: hidden;
   display: block;
   max-width: 550px;
-  border: 1px solid black; /* Black outline */
-	padding: 10px;
-	margin-bottom: 15px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 15px;
+  flex: 0 0 calc(50% - 10px); /* Distribute width and spacing */
 }
 
 .project-box a {
@@ -547,6 +578,18 @@ h5 {
   font-weight: 400;
   margin-top: 0;
   text-align: left;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .project-box {
+    flex: 0 0 calc(85% - 20px); /* Full width on smaller screens */
+    max-width: none; /* Allow full width */
+  }
+
+  .projects-row {
+    justify-content: center; /* Ensure centering */
+  }
 }
 
 /* Contact */
@@ -653,7 +696,7 @@ h5 {
   position: fixed;
   width: 40px;
   height: 40px;
-  background-color: var(--gray-color);
+  background-color: var(--primary-bg-color);
   top: auto;
   left: auto;
   right: 30px;
