@@ -513,7 +513,7 @@ h5 {
   overflow: hidden;
   display: block;
   max-width: 550px;
-  border: 1px solid black;
+  border: 0px solid black;
   padding: 10px;
   margin-bottom: 15px;
   flex: 0 0 calc(50% - 10px); /* Distribute width and spacing */
