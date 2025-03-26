@@ -337,9 +337,9 @@ h5 {
     padding-bottom: 10px;
   }
   .hero-content {
-    padding-left: 80px; /* Adjust padding for smaller screens */
-    padding-right: 80px;
-    padding-top: 80px;
+    padding-left: 120px; /* Adjust padding for smaller screens */
+    padding-right: 120px;
+    padding-top: 120px;
   }
 
   .custom-hero-text {
@@ -490,7 +490,6 @@ h5 {
   text-align: center;
 }
 
-/* Works */
 /* Works */
 .projects {
   padding: 7rem 0;
