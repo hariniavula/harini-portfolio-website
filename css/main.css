@@ -157,6 +157,15 @@ h5 {
   height: 90px;
 }
 
+@media (max-width: 768px) {
+  .header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  }
+
+
 .header-sticky {
   position: fixed;
   top: 0;
@@ -335,15 +344,19 @@ h5 {
     position: relative;
     padding-top: 80px;
     padding-bottom: 10px;
+    padding-left: 20px; /* Adjust padding for smaller screens */
+    padding-right: 20px;
+
   }
   .hero-content {
-    padding-left: 120px; /* Adjust padding for smaller screens */
-    padding-right: 120px;
+   
     padding-top: 120px;
+
   }
 
   .custom-hero-text {
-    font-size: 1.7rem; /* Make the main hero text slightly smaller */
+    font-size: 1.7rem;
+    text-align: left; 
   }
 
   .hero-heading {
@@ -504,7 +517,7 @@ h5 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Keep items centered */
-  gap: 20px;
+  gap: 15px;
 }
 
 .project-box {
@@ -514,7 +527,7 @@ h5 {
   max-width: 550px;
   border: 0px solid black;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   flex: 0 0 calc(50% - 10px); /* Distribute width and spacing */
 }
 
@@ -586,10 +599,12 @@ h5 {
   text-align: left;
 }
 
+
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .project-box {
-    flex: 0 0 calc(85% - 20px); /* Full width on smaller screens */
+    flex: 0 0 calc(88% - 20px); /* Full width on smaller screens */
     max-width: none; /* Allow full width */
   }
 
