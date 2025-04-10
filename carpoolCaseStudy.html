@@ -149,6 +149,21 @@
             color: #424242;
         }
 
+        .case-process-images {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            gap: 20px;
+        }
+
+        .case-process-images img {
+            width: 60%; /* Adjust as needed */
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            height: auto;
+            display: block;
+        }
         .case-solution-images {
             display: flex;
             overflow-x: auto;
@@ -188,6 +203,25 @@
             right: 0;
         }
 
+        .case-process-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .case-process-arrow.left {
+            left: 0;
+        }
+
+        .case-process-arrow.right {
+            right: 0;
+        }
+
         @media (max-width: 768px) {
             .case-timeline-container {
                 flex-direction: column;
@@ -209,7 +243,12 @@
                 grid-template-columns: 1fr;
             }
             .case-solution-images img {
-            width: 80%; /* Adjust as needed */
+            width: 90%; /* Adjust as needed */
+            
+        }
+
+        .case-process-images img {
+            width: 90%; /* Adjust as needed */
             
         }
         }
@@ -256,11 +295,11 @@
                             <p><span class="case-info-detail">COMPANY</span> 
                                 <a href="https://www.sandboxnu.com/" class="wthr-link" target="_blank">Sandbox</a>
                             </p>
-                            <p><span class="case-info-detail">ROLE</span> UX Designer</p>
+                            <p><span class="case-info-detail">ROLE</span> UX/UI Designer</p>
                             <p><span class="case-info-detail">YEAR</span> 2024</p>
                         </div>
                     </div>
-                    <img src="/img/works/carpool.png" alt="AI Scheduling App" class="case-image" />
+                    <img src="/img/works/carpool.png" alt="Carpool App" class="case-image" />
                     <h2 class="case-section">Project Description</h2>
                     <p class="case-descr">Sandbox is Northeastern's student-led software consultancy. As part of the interview for UX designer, I had to redesign a previous project of theirs, CarpoolNU.</p>
                     <div class="case-timeline-container">
@@ -308,7 +347,7 @@
                         <div class="case-timeline-container">
                         </div>
                        
-                        <div class="case-solution-images">
+                        <div class="case-process-images">
                             <img src="/img/works/Carpool 5.png" alt="Process Image">
                             <img src="/img/works/Carpool 6.png" alt="Process Image">
                             <img src="/img/works/Carpool 7.png" alt="Process Image">
@@ -317,8 +356,8 @@
                          
                         </div>
                         
-                        <button class="case-solution-arrow left" onclick="scrollSolution(-1)">&#10094;</button>
-                        <button class="case-solution-arrow right" onclick="scrollSolution(1)">&#10095;</button>
+                        <button class="case-process-arrow left" onclick="scrollProcess(-1)">&#10094;</button>
+                        <button class="case-process-arrow right" onclick="scrollProcess(1)">&#10095;</button>
                     </div>
                    
                     
@@ -450,6 +489,13 @@
     <script>
         function scrollSolution(direction) {
             const container = document.querySelector('.case-solution-images');
+            const scrollAmount = container.clientWidth * 0.8; // Scroll by the width of one image
+            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        function scrollProcess(direction) {
+            const container = document.querySelector('.case-process-images');
             const scrollAmount = container.clientWidth * 0.8; // Scroll by the width of one image
             container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
         }

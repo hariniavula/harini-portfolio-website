@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
+     <style>
         .case-row {
             padding-top: 175px;
             display: flex;
@@ -149,6 +149,21 @@
             color: #424242;
         }
 
+        .case-process-images {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            gap: 20px;
+        }
+
+        .case-process-images img {
+            width: 60%; /* Adjust as needed */
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            height: auto;
+            display: block;
+        }
         .case-solution-images {
             display: flex;
             overflow-x: auto;
@@ -188,6 +203,25 @@
             right: 0;
         }
 
+        .case-process-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .case-process-arrow.left {
+            left: 0;
+        }
+
+        .case-process-arrow.right {
+            right: 0;
+        }
+
         @media (max-width: 768px) {
             .case-timeline-container {
                 flex-direction: column;
@@ -209,10 +243,14 @@
                 grid-template-columns: 1fr;
             }
             .case-solution-images img {
-            width: 80%; /* Adjust as needed */
+            width: 90%; /* Adjust as needed */
+            
             
         }
+        .case-process-images img {
+            width: 90%; 
         }
+    }
     </style>
 </head>
 
@@ -244,170 +282,173 @@
             </div>
         </div>
     </header>
-
-    <main>
-        <section id="case" class="case">
-            <div class="container">
-                <div class="case-row">
-                    <div class="case-content" data-aos="fade-up" data-aos-duration="1000">
-                        <p class="case-subtitle">GOOGLE UX DESIGN PROJECT - Flower Shop Ordering App </p>
-                        <h2 class="case-title">Creating Garden Blooms    <a href="#"  target="_blank" onclick="window.open('img/works/Google Case study .pdf'); return false;"> 🔗</a>
-                            
+  <!--   <h2 class="case-title">Creating Garden Blooms <a href="#" target="_blank"
+        onclick="window.open('img/works/Google Case study .pdf'); return false;"> 🔗</a>
+ -->
+ <main>
+    <section id="case" class="case">
+        <div class="container">
+            <div class="case-row">
+                <div class="case-content" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="case-subtitle">GOOGLE UX DESIGN PROJECT - Flower Shop Ordering App
+                    </p>
+                    <h2 class="case-title">Creating Garden Blooms <a href="#" target="_blank"
+                        onclick="window.open('img/works/Google Case study .pdf'); return false;"> 🔗</a></h2>
                         <div class="case-info">
                             <p><span class="case-info-detail">COMPANY</span> 
                                 
                                 <a href="https://www.credly.com/badges/3d719d30-7cb9-4a1d-83ae-f333109ec646/linked_in_profile" class="wthr-link" target="_blank">Google x Coursera</a>
                             </p>
-                            <p><span class="case-info-detail">ROLE</span> UX Designer</p>
+                            <p><span class="case-info-detail">ROLE</span> UX/UI Designer</p>
                             <p><span class="case-info-detail">YEAR</span> 2025</p>
                         </div>
-                    </div>
                     <img src="/img/works/flower shop.png" alt="Flower App" class="case-image" />
                     <h2 class="case-section">Project Description</h2>
-                    <p class="case-descr">As part of the Coursera x Google UX Designer Professional Certificate, this was the project that I worked on throughout the course. The goal was to design an application following all the steps of the design process: empathize, define, ideate, prototype, and test.  </p>
+                    <p class="case-descr">As part of the Coursera x Google UX Designer Professional Certificate, this was the
+                        project that I worked on throughout the course. The goal was to design an application following all
+                        the steps of the design process: empathize, define, ideate, prototype, and test. </p>
                     <div class="case-timeline-container">
                         <h3>Timeline</h3>
                         <p>I took this course from Feb 2025 - Apr 2025.</p>
-                        
+
                     </div>
                     <div class="case-timeline-container">
-                   
-                            <h3>Background</h3>
-                            <p>The goal was to develop an application that allows customers to design and order their own flower bouquet and flexibility to pick it up at the florist.</p>
-                     
+
+                        <h3>Background</h3>
+                        <p>The goal was to develop an application that allows customers to design and order their own flower
+                            bouquet and flexibility to pick it up at the florist.</p>
+
                     </div>
                     <div class="case-timeline-container">
-                </div>
-                <div class="case-timeline-container">
-                   
-                       
-                 
-                </div>
-                    
+                    </div>
+                    <div class="case-timeline-container">
+
+
+
+                    </div>
+
                     <h2 class="case-section">Process</h2>
-                    <p class="case-descr">The process involved user research, competitive analysis, sitemaps, user flows, wireframing, prototyping, iterating on design, and accessibility designing. </p>
+                    <p class="case-descr">The process involved user research, competitive analysis, sitemaps, user flows,
+                        wireframing, prototyping, iterating on design, and accessibility designing. </p>
                     <div class="case-timeline-container">
-                   
+
                         <h3>Research & Planning
 
                         </h3>
-                        <p>The primary users of the bouquet app ranged from teens to adults looking to pick up flowers for their family members, friends, and partners.  Market reports and user reviews revealed that many people are busy with work and other commitments, and prefer ordering flowers online on an app.  There seemed to be a significant and growing demand for personalized floral experiences.  Users wanted to create their own bouquets and see a visual composition of their creation before placing their order. </p>
-                 
-                </div>
-                    <div class="case-timeline-container">
-                   
-                            <h3>Design & Prototyping
+                        <p>The primary users of the bouquet app ranged from teens to adults looking to pick up flowers for
+                            their family members, friends, and partners. Market reports and user reviews revealed that many
+                            people are busy with work and other commitments, and prefer ordering flowers online on an app.
+                            There seemed to be a significant and growing demand for personalized floral experiences. Users
+                            wanted to create their own bouquets and see a visual composition of their creation before placing
+                            their order. </p>
 
-                            </h3>
-                            <p>The design process started with paper wireframes, then moved to digital wireframes, a low-fidelity prototype, and usability studies.  Usability studies with 5 individuals helped refine the low-fidelity designs into high-fidelity prototypes. </p>
-                     
+                    </div>
+                    <div class="case-timeline-container">
+
+                        <h3>Design & Prototyping
+
+                        </h3>
+                        <p>The design process started with paper wireframes, then moved to digital wireframes, a
+                            low-fidelity prototype, and usability studies. Usability studies with 5 individuals helped refine
+                            the low-fidelity designs into high-fidelity prototypes. </p>
+
                     </div>
                     <div class="case-solution-container">
                         <div class="case-timeline-container">
                         </div>
-                       
-                        <div class="case-solution-images">
+
+                        <div class="case-process-images">
                             <img src="/img/works/flower Page 8.png" alt="Process Image">
                             <img src="/img/works/flower Page 9.png" alt="Process Image">
                             <img src="/img/works/flower Page 10.png" alt="Process Image">
                             <img src="/img/works/flower Page 11.png" alt="Process Image">
 
 
-                         
+
                         </div>
-                        
+
+                        <button class="case-process-arrow left" onclick="scrollProcess(-1)">&#10094;</button>
+                        <button class="case-process-arrow right" onclick="scrollProcess(1)">&#10095;</button>
+                    </div>
+
+                    <div class="case-timeline-container">
+                    </div>
+                    <div class="case-timeline-container">
+
+                    </div>
+
+                    <h2 class="case-section">Solution</h2>
+                    <p class="case-descr">With user feedback, I added features to a mobile app to address pain points.</p>
+                    <div class="case-timeline-container">
+                        <h3>Easy Customization</h3>
+                        <p>Easy customization with steps, including the ability to go back and forth during the bouquet
+                            creation process. </p>
+
+                    </div>
+                    <div class="case-timeline-container">
+
+                        <h3>Placing Order Flow</h3>
+                        <p>Allows users to select their preferred pickup time, easily pay, and confirm all details before
+                            finalizing the purchase.</p>
+
+                    </div>
+                    <div class="case-timeline-container">
+
+                        <h3>Notification System</h3>
+                        <p>Keeps users informed with order updates and status.</p>
+
+                    </div>
+
+                    <div class="case-timeline-container">
+
+                        <h3>Review and Reorder Previous Orders</h3>
+                        <p>Includes a dedicated section within the user profile where customers can view a history of their
+                            past orders. This feature allows users to quickly reorder the same arrangements and review
+                            previous purchases.</p>
+
+                    </div>
+
+                    <div class="case-solution-container">
+                        <div class="case-timeline-container">
+                        </div>
+
+                        <div class="case-solution-images">
+                            <img src="/img/works/flower Page 1.png" alt="Solution Image 1">
+                            <img src="/img/works/flower Page 2.png" alt="Solution Image 1">
+                            <img src="/img/works/flower Page 3.png" alt="Solution Image 1">
+                            <img src="/img/works/flower Page 4.png" alt="Solution Image 1">
+                            <img src="/img/works/flower Page 5.png" alt="Solution Image 1">
+                            <img src="/img/works/flower Page 6.png" alt="Solution Image 1">
+
+
+
+                        </div>
+
                         <button class="case-solution-arrow left" onclick="scrollSolution(-1)">&#10094;</button>
                         <button class="case-solution-arrow right" onclick="scrollSolution(1)">&#10095;</button>
                     </div>
-                   
-                    
-                
                     <div class="case-timeline-container">
                     </div>
                     <div class="case-timeline-container">
-                       
-                           
-                     
                     </div>
-                        
-                        <h2 class="case-section">Solution</h2>
-                        <p class="case-descr">With user feedback, I added features to a mobile app to address pain points.</p>
-                        <div class="case-timeline-container">
-                            <h3>Easy Customization</h3>
-                            <p>Easy customization with steps, including the ability to go back and forth during the bouquet creation process. </p>
-                            
-                        </div>
-                        <div class="case-timeline-container">
-                       
-                                <h3>Placing Order Flow</h3> <p>Allows users to select their preferred pickup time, easily pay, and confirm all details before finalizing the purchase.</p>
-                         
-                        </div>
-                        <div class="case-timeline-container">
-                       
-                            <h3>Notification System</h3>
-                            <p>Keeps users informed with order updates and status.</p>
-                     
-                    </div>
-                  
+
+                    <h2 class="case-section">Challenges & Takeaways</h2>
+                    <p class="case-descr">I learned the importance of iteration. Designs are constantly improved and iterated
+                        on based on feedback and testing. Usability studies and peer feedback provide valuable insights and
+                        drive design improvements. Throughout the process, I understood that the user is the central focus
+                        in each iteration.
+                    </p>
                     <div class="case-timeline-container">
-                       
-                        <h3>Review and Reorder Previous Orders</h3>
-                        <p>Includes a dedicated section within the user profile where customers can view a history of their past orders. This feature allows users to quickly reorder the same arrangements and review previous purchases.</p>
-                 
-                </div>
-
-                        <div class="case-solution-container">
-                            <div class="case-timeline-container">
-                            </div>
-                           
-                            <div class="case-solution-images">
-                                <img src="/img/works/flower Page 1.png" alt="Solution Image 1">
-                                <img src="/img/works/flower Page 2.png" alt="Solution Image 1">
-                                <img src="/img/works/flower Page 3.png" alt="Solution Image 1">
-                                <img src="/img/works/flower Page 4.png" alt="Solution Image 1">
-                                <img src="/img/works/flower Page 5.png" alt="Solution Image 1">
-                                <img src="/img/works/flower Page 6.png" alt="Solution Image 1">
-
-
-                             
-                            </div>
-                            
-                            <button class="case-solution-arrow left" onclick="scrollSolution(-1)">&#10094;</button>
-                            <button class="case-solution-arrow right" onclick="scrollSolution(1)">&#10095;</button>
-                        </div>
-                        <div class="case-timeline-container">
-                        </div>
-                        <div class="case-timeline-container">
-                           
-                        </div>
-                            
-                            <h2 class="case-section">Challenges & Takeaways</h2>
-                            <p class="case-descr">I learned the importance of iteration. Designs are constantly improved and iterated on based on feedback and testing.
-                            Usability studies and peer feedback provide valuable insights and drive design improvements. Throughout the process, I understood that the user is the central focus in each iteration.
-
-
-
-
-
-
-
-                            </p>
-                            <div class="case-timeline-container">
-                            </div>
-                            <div class="case-timeline-container">
-                            </div>
-                            
-                            </div>
-                        
                     </div>
-                  
-            
+                    <div class="case-timeline-container">
+                    </div>
+
                 </div>
-                
-                </div>
-                
-                
-                
+
+            </div>
+
+
+
             </div>
         </section>
 
@@ -451,6 +492,13 @@
     <script>
         function scrollSolution(direction) {
             const container = document.querySelector('.case-solution-images');
+            const scrollAmount = container.clientWidth * 0.8; // Scroll by the width of one image
+            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        function scrollProcess(direction) {
+            const container = document.querySelector('.case-process-images');
             const scrollAmount = container.clientWidth * 0.8; // Scroll by the width of one image
             container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
         }
