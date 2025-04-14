@@ -499,7 +499,7 @@ h5 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 24px;
 }
 
 .project-box {
