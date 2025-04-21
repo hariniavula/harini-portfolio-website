@@ -10,15 +10,15 @@
   <link rel="stylesheet" href="css/media.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    
+    /* Existing styles */
     .works-title {
       font-size: 2.5rem;
       font-weight: 500;
       padding-bottom: 10px;
       padding-top: 70px;
-      margin-bottom: 50px;
+      margin-bottom: 15px;
       line-height: 1;
-      text-align: center; /* Center the title */
+      text-align: center;
     }
 
     .nav-item-works {
@@ -28,12 +28,101 @@
       text-underline-offset: 7px;
     }
 
-   
-
     @media screen and (max-width: 768px) {
-      
       .works-title {
         font-size: 1.75rem;
+      }
+    }
+
+    /* Filter styles */
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+      gap: 18px; /* Add some space between buttons */
+    }
+
+    .filter-button {
+      padding: 8px 15px;
+      margin: 0; /* Remove default button margins */
+      border: 1px solid black;
+      border-color: black;
+      color: black;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .filter-button:hover {
+      background-color: var(--secondary-accent);
+      color: white;
+      border: none;
+    }
+
+    .filter-button.active {
+      background-color: var(--primary-accent);
+      color: white;
+    }
+
+    /* Project Box Styles with Hover Effect */
+    .project-box {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .project-box:hover {
+      border-color: black;
+    }
+
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      color: white;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .project-box:hover .project-overlay {
+      opacity: 1;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media screen and (max-width: 600px) {
+      .filter-container {
+        justify-content: center;
+        gap: 12px; 
+        /* Align buttons to the left */
+      }
+
+      .filter-button {
+        padding: 5px 10px; /* Slightly smaller padding */
+        font-size: 0.85rem; /* Smaller font size */
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .filter-button {
+        padding: 4px 8px; /* Even smaller padding */
+        font-size: 0.6rem; /* Even smaller font size */
       }
     }
   </style>
@@ -71,10 +160,18 @@
       <div class="works-content" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
           <h2 class="works-title">Things I've created 🎨 </h2>
+
+          <div class="filter-container">
+            <button class="filter-button active" data-filter="all">ALL</button>
+            <button class="filter-button" data-filter="software">SOFTWARE</button>
+            <button class="filter-button" data-filter="design">DESIGN</button>
+            <button class="filter-button" data-filter="product">PRODUCT</button>
+          </div>
+
         </div>
       </div>
       <div class="projects-row">
-        <div class="project-box">
+        <div class="project-box" data-category="design">
           <a href="goodDogCaseStudy.html">
             <img class="project-img" src="img/works/good dog final.png" alt="Good Dog" />
             <div class="project-mask">
@@ -83,9 +180,11 @@
                 <p class="white">UI/UX Design</p>
               </div>
             </div>
+            <div class="project-overlay">
+            </div>
           </a>
         </div>
-        <div class="project-box">
+        <div class="project-box" data-category="design">
           <a href="carpoolCaseStudy.html">
             <img class="project-img" src="img/works/carpool.png" alt="Carpool" />
             <div class="project-mask">
@@ -94,9 +193,11 @@
                 <p class="white">UX Redesign</p>
               </div>
             </div>
+            <div class="project-overlay">
+            </div>
           </a>
         </div>
-        <div class="project-box">
+        <div class="project-box" data-category="design">
           <a href="flowerCaseStudy.html">
             <img class="project-img" src="img/works/flower shop.png" alt="Garden Blooms" />
             <div class="project-mask">
@@ -105,9 +206,11 @@
                 <p class="white">UX/UI Design</p>
               </div>
             </div>
+            <div class="project-overlay">
+            </div>
           </a>
         </div>
-        <div class="project-box">
+        <div class="project-box" data-category="design product">
           <a href="https://www.figma.com/proto/SpR1QABzusaRYxoQsxg31W/Oasis-Presentation?node-id=0-1&t=zUOrxEBRQk7REGZO-1">
             <img class="project-img" src="img/works/Oasis Final.png" alt="Oasis" />
             <div class="project-mask">
@@ -116,9 +219,11 @@
                 <p class="white">Digital Marketing</p>
               </div>
             </div>
+            <div class="project-overlay">
+            </div>
           </a>
         </div>
-        <div class="project-box">
+        <div class="project-box" data-category="software design">
           <a href="https://www.forgenu.com/home">
             <img class="project-img" src="img/works/forge final.png" alt="Forge" />
             <div class="project-mask">
@@ -127,9 +232,11 @@
                 <p class="white">Website Development</p>
               </div>
             </div>
+            <div class="project-overlay">
+            </div>
           </a>
         </div>
-        <div class="project-box">
+        <div class="project-box" data-category="software">
           <a href="https://www.figma.com/proto/POoog6nIi5jrdHRkICoRw7/Stock-Portfolio-Manager?node-id=0-1&t=lrHbPMAEpGGmmXDK-1">
             <img class="project-img" src="img/works/stocks final.png" alt="Stock" />
             <div class="project-mask">
@@ -138,9 +245,11 @@
                 <p class="white">CS 3500 Project</p>
               </div>
             </div>
+            <div class="project-overlay">
+            </div>
           </a>
         </div>
-        <div class="project-box">
+        <div class="project-box" data-category="software">
           <a href="https://www.figma.com/proto/CGUSrnojjFSY1EBT49kHmq/Beats-Report?node-id=0-1&t=MlhTtK4iKZrNGAsQ-1">
             <img class="project-img" src="img/works/beats final.png" alt="Beats" />
             <div class="project-mask">
@@ -149,9 +258,11 @@
                 <p class="white">Data Analysis & Visualization</p>
               </div>
             </div>
+            <div class="project-overlay">
+            </div>
           </a>
         </div>
-        <div class="project-box">
+        <div class="project-box" data-category="software">
           <a href="https://www.figma.com/proto/qlAJ0BpiUtUt6qvzKgx3fJ/Employ.ai?node-id=0-1&t=DvUjU03gnLdvjkaF-1">
             <img class="project-img" src="img/works/employ final.png" alt="Employ" />
             <div class="project-mask">
@@ -160,10 +271,12 @@
                 <p class="white">Web Development</p>
               </div>
             </div>
+            <div class="project-overlay">
+            </div>
           </a>
         </div>
-       
-        <div class="project-box">
+
+        <div class="project-box" data-category="software">
           <a href="https://www.figma.com/proto/Ljl1x2ZK5wpoq5xcVDIkvO/ZType-Word-Game?node-id=0-1&t=9b4wElPQnmSP8yJl-1">
             <img class="project-img" src="img/works/word.png" alt="ZType" />
             <div class="project-mask">
@@ -172,30 +285,24 @@
                 <p class="white">CS 2510 Project</p>
               </div>
             </div>
-          </a>
-        </div>
-       <!--  <div class="project-box">
-          <a href="https://www.figma.com/proto/gFDyl6eVndJYjhIwUQyj9b/Artist-Quest?node-id=0-1&t=Yusb9WrPaR0CcUXo-1">
-            <img class="project-img" src="img/works/artist.png" alt="Artist" />
-            <div class="project-mask">
-              <div class="project-caption">
-                <h5 class="white">Artist Quest</h5>
-                <p class="white">Web Development</p>
-              </div>
+            <div class="project-overlay">
             </div>
           </a>
-        </div> -->
-        <div class="project-box">
-          <a href="https://www.figma.com/proto/sHmdGxFgCDYw0ohKUDpQ71/Nexcap?node-id=0-1&t=ZfrNlOWMPy8MJueD-1">
-            <img class="project-img" src="img/works/Nexcap Final.png" alt="Nexcap" />
+        </div>
+        <div class="project-box" data-category="product">
+          <a href="https://pitch.com/v/pitch-deck-nexcap-9biazb">
+            <img class="project-img" src="img/works/Nexcap Final.png" alt="ZType" />
             <div class="project-mask">
               <div class="project-caption">
                 <h5 class="white">Nexcap App Prototype</h5>
-                <p class="white">UI/UX Design</p>
+                <p class="white">Product Pitching</p>
               </div>
+            </div>
+            <div class="project-overlay">
             </div>
           </a>
         </div>
+       
       </div>
     </section>
   </main>
@@ -231,6 +338,28 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const projectBoxes = document.querySelectorAll('.project-box');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+
+        // Update active button state
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        projectBoxes.forEach(box => {
+          if (filterValue === 'all' || box.dataset.category.includes(filterValue)) {
+            box.classList.remove('hidden');
+          } else {
+            box.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
   <script type="module" src="js/main.js"></script>
 </body>
 
