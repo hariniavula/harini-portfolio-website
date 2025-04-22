@@ -155,12 +155,16 @@ h5 {
   height: 90px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1200px) {
   .header {
-    padding-left: 10px;
-    padding-right: 10px;
+
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
+
+
+
 
 .header-sticky {
   position: fixed;
@@ -343,6 +347,7 @@ h5 {
   }
   .hero-content {
     padding-top: 120px;
+
   }
   .custom-hero-text {
     font-size: 1.7rem;
@@ -361,6 +366,49 @@ h5 {
     font-weight: 400;
     font-size: 2.75rem;
     line-height: 0;
+  }
+}
+
+/* Media Queries for Medium Screens (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .hero {
+    padding-top: 180px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hero-content {
+    padding-top: 140px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 90px;
+  }
+
+  .custom-hero-text {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .hero-heading {
+    font-size: 3.5rem;
+  }
+
+  .hero-heading-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-img {
+    justify-content: flex-end;
+    padding-top: 40px;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+  }
+
+  .harini-font {
+    font-size: 3.5rem;
   }
 }
 .about-social-list {
